@@ -3,9 +3,9 @@ class TicTacToe {
         var step, field = [[],[],[]];
         this.step = 'x';
         this.field = [
-            [0, 0, 0],
-            [0, 0, 0],
-            [0, 0, 0]
+            [null, null, null],
+            [null, null, null],
+            [null, null, null]
             ];
     }
 
@@ -18,7 +18,7 @@ class TicTacToe {
     }
 
     nextTurn(rowIndex, columnIndex) {
-        if (this.field[rowIndex][columnIndex] == 0){ 
+        if (this.field[rowIndex][columnIndex] == null){ 
             this.field[rowIndex][columnIndex] = this.step;
             if (this.step == 'x'){
                 this.step = 'o';
@@ -45,7 +45,7 @@ class TicTacToe {
     }
 
     getFieldValue(rowIndex, colIndex) {
-
+        return this.field[rowIndex][colIndex];
     }
 }
 
