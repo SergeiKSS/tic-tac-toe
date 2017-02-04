@@ -128,7 +128,14 @@ class TicTacToe {
     }
 
     noMoreTurns() {
-
+        for (var i = 0; i < this.field.length; i++) {
+            for (var j = 0; j < this.field.length; j++) {
+                if (this.field[i][j]==null){
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     isDraw() {
