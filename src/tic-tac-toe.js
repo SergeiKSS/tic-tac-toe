@@ -142,7 +142,9 @@ class TicTacToe {
     }
 
     isDraw() {
-
+        if (this.getWinner() != null || this.isFinished()==false) {return false;};
+        if (this.getWinner() == null && this.isFinished()==true) {return true;};
+    }
     }
 
     getFieldValue(rowIndex, colIndex) {
