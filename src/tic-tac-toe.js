@@ -29,7 +29,10 @@ class TicTacToe {
     }
 
     isFinished() {
-
+        if (this.getWinner()!=null || this.noMoreTurns()){
+            return true;
+        }
+        return false;
     }
 
     getWinner() {
