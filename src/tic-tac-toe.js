@@ -33,6 +33,97 @@ class TicTacToe {
     }
 
     getWinner() {
+        var win = 'x',
+            count = 0;
+            //горизонтали и вертикали
+        for (var i = 0; i < this.field.length; i++) {
+            for (var j = 0; j < this.field.length; j++) {
+                if (this.field[i][j]==win){
+                    count++;
+                } 
+            }
+            if (count == this.field.length){
+                return win;
+            }
+            count = 0;
+        }
+        for (var j = 0; j < this.field.length; j++) {
+            for (var i = 0; i < this.field.length; i++) {
+                if (this.field[i][j]==win){
+                    count++;
+                } 
+            }
+            if (count == this.field.length){
+                return win;
+            }
+            count = 0;
+        }
+        //диагонали
+        for (var i = 0; i < this.field.length; i++) {
+            if (this.field[i][i]==win) {
+                count++;
+            }
+        }
+        if (count == this.field.length){
+                return win;
+            }
+        count = 0;
+        var j = 0;
+        for (var i = this.field.length-1; i >= 0; i--) {
+            if (this.field[j][i]==win) {
+                count++;};
+            j++;
+        }
+        if (count == this.field.length){
+                return win;
+            }
+        count = 0;
+
+        win = 'o';
+        for (var i = 0; i < this.field.length; i++) {
+            for (var j = 0; j < this.field.length; j++) {
+                if (this.field[i][j]==win){
+                    count++;
+                } 
+            }
+            if (count == this.field.length){
+                return win;
+            }
+            count = 0;
+        }
+        for (var j = 0; j < this.field.length; j++) {
+            for (var i = 0; i < this.field.length; i++) {
+                if (this.field[i][j]==win){
+                    count++;
+                } 
+            }
+            if (count == this.field.length){
+                return win;
+            }
+            count = 0;
+        }
+        //диагонали
+        for (var i = 0; i < this.field.length; i++) {
+            if (this.field[i][i]==win) {
+                count++;
+            }
+        }
+        if (count == this.field.length){
+                return win;
+            }
+        count = 0;
+        var j = 0;
+        for (var i = this.field.length-1; i >= 0; i--) {
+            if (this.field[j][i]==win) {
+                count++;};
+            j++;
+        }
+        if (count == this.field.length){
+                return win;
+            }
+        count = 0;
+
+        return null;
 
     }
 
